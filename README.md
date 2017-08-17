@@ -8,7 +8,7 @@ In this workshop, we will introudce the Raspberry Pi Camera and Python in day 1,
 4. The basic of V4L2, pro and cons
 5. Build a MJPEG streaming server from scratch
 
-The slide is available on [Raspberry Pi Camera + Python + OpenCV (Day1)][https://www.slideshare.net/raspberrypi-tw/raspberry-pi-camera-python-opencv-day1]
+The slide is available on [Raspberry Pi Camera + Python + OpenCV (Day1)](https://www.slideshare.net/raspberrypi-tw/raspberry-pi-camera-python-opencv-day1)
 
 
 In day 2, we will introduce:
