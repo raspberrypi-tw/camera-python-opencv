@@ -1,0 +1,21 @@
+/* reference: 
+   http://www.dummies.com/how-to/content/using-the-div-tag-to-create-tables.html */
+
+Table
+{
+    display: table;
+}
+.Row
+{   
+    display: table-row;
+    height: 100px;
+    width: 100px;
+}   
+.Cell
+{   
+    display: table-cell;
+    border-width: thin;
+    height: 100px;
+    width: 100px;
+}   
+
