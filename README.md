@@ -21,7 +21,7 @@ The slide is available on [Raspberry Pi Camera + Python + OpenCV (Day2)](https:/
 
 
 ## Environment
-[Raspberry Pi 3](https://www.raspberrypi.com.tw/10684/55/) + 2017-09-23-raspbian-jessie.img. + [5MP Camera for Pi](https://www.raspberrypi.com.tw/654/701/)
+[Raspberry Pi 3](https://www.raspberrypi.com.tw/10684/55/) + SanDisk 32G microSD  + [5MP Camera for Pi](https://www.raspberrypi.com.tw/654/701/) + 2017-09-23-raspbian-jessie.img
 
 ## Prerequisite
 ### Install required package and Python module
@@ -31,6 +31,7 @@ $ sudo apt-get install -y festival python-dev python-opencv python-pip x11vnc li
 $ sudo pip install request flask numpy
 ```
 
-## Buy Camera and accessories
+## Buy Camera and accessories and more
 See [Camera](https://www.raspberrypi.com.tw/shop/camera/)
+See [Shop](https://www.raspberrypi.com.tw/shop/)
 
