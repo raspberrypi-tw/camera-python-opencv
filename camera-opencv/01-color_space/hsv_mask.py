@@ -16,7 +16,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("lena512rgb.jpg")
+image = cv2.imread("lena256rgb.jpg")
 
 # Convert BGR to HSV
 hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)

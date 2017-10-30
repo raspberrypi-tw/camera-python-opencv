@@ -11,10 +11,11 @@
 # Choose the HSV value in real-time
 #
 # Author : Aruldd
-# Usage  : python choose_hsv_value.py lena512rgb.png
+# Usage  : python hsv_value.py lena256rgb.jpg
 # Origin : http://stackoverflow.com/questions/10948589/choosing-correct-hsv-values-for-opencv-thresholding-with-inranges
 
 import cv2
+import sys
 import numpy as np
 
 
@@ -36,7 +37,12 @@ cv2.createTrackbar('su', 'hsv_demo', 255, 255, nothing)
 cv2.createTrackbar('vl', 'hsv_demo', 0,   255, nothing)
 cv2.createTrackbar('vu', 'hsv_demo', 255, 255, nothing)
 
-image = cv2.imread("lena256rgb.jpg")
+try:
+    imagePath = sys.argv[1]
+    image = cv2.imread(imagePath)
+except:
+    image = cv2.imread("lena256rgb.jpg")
+
 
 while True:
 
