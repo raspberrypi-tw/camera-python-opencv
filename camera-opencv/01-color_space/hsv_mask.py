@@ -33,7 +33,7 @@ cv2.imshow("Bitwise_not", bitwise_not)
 cv2.waitKey(0)
 
 bitwise_not = cv2.bitwise_not(image, mask=binary)
-cv2.imshow("Bitwise_not", bitwise_not)
+cv2.imshow("Bitwise_not_mask", bitwise_not)
 cv2.waitKey(0)
 
 bitwise_and = cv2.bitwise_and(image, image, mask=binary)

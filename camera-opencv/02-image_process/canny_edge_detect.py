@@ -40,7 +40,6 @@ while True:
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     edges = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(edges, threshold, threshold * ratio, apertureSize=3)
-    cv2.bitwise_and(image, image, mask=edges)
     cv2.imshow('canny_demo', edges)
 
     if cv2.waitKey(1) & 0xFF == ord("q"):
