@@ -1,4 +1,5 @@
 #!/usr/bin/python
+'''
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #|R|a|s|p|b|e|r|r|y|P|i|.|c|o|m|.|t|w|
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -10,16 +11,16 @@
 # Date   : 06/22/2014
 # Origin : https://realpython.com/blog/python/face-detection-in-python-using-a-webcam/
 # Usage  : python camera_face_detect.py haarcascade_frontalface_default.xml
-
-import cv2
+'''
 import sys
+import cv2
 
 cascPath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 cap = cv2.VideoCapture(0)
-cap.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH,  320)
-cap.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, 240)
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 
 while True:
     # Capture frame-by-frame
@@ -32,7 +33,7 @@ while True:
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-        flags=cv2.cv.CV_HAAR_SCALE_IMAGE
+        flags=cv2.CV_FEATURE_PARAMS_HAAR
     )
 
     print "Found {0} faces!".format(len(faces))
@@ -50,4 +51,3 @@ while True:
 # When everything is done, release the capture
 cap.release()
 cv2.destroyAllWindows()
-
