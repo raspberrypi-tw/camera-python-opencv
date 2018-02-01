@@ -1,4 +1,5 @@
 #!/usr/bin/python
+"""
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 #|R|a|s|p|b|e|r|r|y|P|i|.|c|o|m|.|t|w|
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -10,9 +11,9 @@
 # Date   : 06/06/2014
 # Origin : https://github.com/shantnu/FaceDetect/blob/master/face_detect.py
 # Usage  : python image_face_detect.py abba.png haarcascade_frontalface_default.xml
-
-import cv2
+"""
 import sys
+import cv2
 
 # Get user supplied values
 imagePath = sys.argv[1]
@@ -31,7 +32,7 @@ faces = faceCascade.detectMultiScale(
     scaleFactor=1.1,
     minNeighbors=5,
     minSize=(30, 30),
-    flags = cv2.cv.CV_HAAR_SCALE_IMAGE
+    flags=cv2.CV_FEATURE_PARAMS_HAAR
 )
 
 print "Found {0} faces!".format(len(faces))
