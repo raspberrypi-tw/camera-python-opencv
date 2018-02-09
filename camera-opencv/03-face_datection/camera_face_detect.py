@@ -18,9 +18,19 @@ import cv2
 cascPath = sys.argv[1]
 faceCascade = cv2.CascadeClassifier(cascPath)
 
+if cv2.__version__.startswith('2'):
+    PROP_FRAME_WIDTH = cv2.cv.CV_CAP_PROP_FRAME_WIDTH
+    PROP_FRAME_HEIGHT = cv2.cv.CV_CAP_PROP_FRAME_HEIGHT
+    HAAR_FLAGS = cv2.cv.CV_HAAR_SCALE_IMAGE
+
+elif cv2.__version__.startswith('3'):
+    PROP_FRAME_WIDTH = cv2.CAP_PROP_FRAME_WIDTH
+    PROP_FRAME_HEIGHT = cv2.CAP_PROP_FRAME_HEIGHT
+    HAAR_FLAGS = cv2.CV_FEATURE_PARAMS_HAAR
+
 cap = cv2.VideoCapture(0)
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
+cap.set(PROP_FRAME_WIDTH, 320)
+cap.set(PROP_FRAME_HEIGHT, 240)
 
 while True:
     # Capture frame-by-frame
@@ -33,7 +43,7 @@ while True:
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
-        flags=cv2.CV_FEATURE_PARAMS_HAAR
+        flags=HAAR_FLAGS
     )
 
     print "Found {0} faces!".format(len(faces))
