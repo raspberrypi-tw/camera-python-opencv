@@ -28,6 +28,7 @@ except:
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 (_, binary) = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow("Binary", binary)
+cv2.waitKey(0)
 
 kernel = np.ones((3,3), np.uint8)
 erode  = cv2.erode(binary, kernel, iterations=1)
