@@ -32,6 +32,12 @@ elif cv2.__version__.startswith('3'):
     PROP_FRAME_HEIGHT = cv2.CAP_PROP_FRAME_HEIGHT
     HAAR_FLAGS = cv2.CV_FEATURE_PARAMS_HAAR
 
+else:
+    PROP_FRAME_WIDTH = cv2.CAP_PROP_FRAME_WIDTH
+    PROP_FRAME_HEIGHT = cv2.CAP_PROP_FRAME_HEIGHT
+    HAAR_FLAGS = cv2.CV_FEATURE_PARAMS_HAAR
+
+
 # Read the image
 image = cv2.imread(imagePath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
